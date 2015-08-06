@@ -34,24 +34,10 @@ public class TicTacToeAppTest {
     }
 
     @Test
-    public void shouldAddXWhenUserEntersMove() throws IOException {
+    public void shouldDisplayXWhenUser1EntersMove() throws IOException {
         when(bufferedReader.readLine()).thenReturn("1");
         ticTacToeApp.getUsersMove(1);
         verify(printStream).println(contains("X"));
-    }
-
-    @Test
-    public void shouldAddXInNWCornerWhenUser1Enters1() throws IOException {
-        when(bufferedReader.readLine()).thenReturn("1");
-        ticTacToeApp.getUsersMove(1);
-        verify(printStream).println(contains("X |   | "));
-    }
-
-    @Test
-    public void shouldAddOInSWCornerWhenUser2Enters9() throws IOException {
-        when(bufferedReader.readLine()).thenReturn("9");
-        ticTacToeApp.getUsersMove(2);
-        verify(printStream).println(contains(" |   | O"));
     }
 
 }
