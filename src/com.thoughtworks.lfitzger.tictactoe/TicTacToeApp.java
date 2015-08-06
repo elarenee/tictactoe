@@ -12,20 +12,30 @@ public class TicTacToeApp {
     private PrintStream printStream;
     private BufferedReader bufferedReader;
     private Board board;
+    private boolean waitingForValidMove;
+    private int currentPlayer;
 
     public TicTacToeApp(PrintStream printStream, BufferedReader bufferedReader) {
         this.printStream = printStream;
         this.bufferedReader = bufferedReader;
         board = new Board(printStream);
+        waitingForValidMove = true;
+        currentPlayer = 1;
     }
 
-    public void startGame() {
+    public void playGame() {
         board.draw();
+
+        while(waitingForValidMove == true) {
+            getUsersMove(currentPlayer);
+        }
+
     }
 
     public void getUsersMove(int player) { // this method is way too long!!!
+        currentPlayer = player;
 
-        printStream.println(String.format("Player %s, enter your move [1-9]: ", player));
+        printStream.println(String.format("Player %s, enter your move [1-9]: ", currentPlayer));
         int position = 0;
         try {
             position = Integer.parseInt(bufferedReader.readLine());
@@ -34,14 +44,20 @@ public class TicTacToeApp {
         }
 
         if(board.positionAvailable(position)) {
-            board.move(position, player);
+            board.move(position, currentPlayer);
+            /*if(currentPlayer == 1) {
+                currentPlayer = 2;
+            }
+            else {
+                currentPlayer = 1;
+            }*/
+            waitingForValidMove = false;
         }
         else {
             printStream.println("Location already taken");
+            waitingForValidMove = true;
         }
 
-
-        printStream.println("This is the current tic-tac-toe board: ");
         board.draw();
     }
 

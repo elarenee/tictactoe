@@ -42,7 +42,6 @@ public class BoardTest {
     public void shouldNotBeAvailableWhenTwoUsersSelectSamePosition() {
         board.move(2, player1);
         assertEquals(false, board.positionAvailable(2));
-
     }
 
 }

@@ -39,6 +39,7 @@ public class Board {
     }
 
     public void draw() {
+        printStream.println("This is the current tic-tac-toe board: ");
         int idx = 0;
         for(int lineCount = 1; lineCount <= 5; lineCount++) {
             if(lineCount % 2 == 0) {
