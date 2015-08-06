@@ -26,7 +26,7 @@ public class TicTacToeApp {
     public void playGame() {
         board.draw();
 
-        while(waitingForValidMove == true) {
+        while(waitingForValidMove && board.hasOpenSpaces()) {
             getUsersMove(currentPlayer);
         }
 

@@ -31,6 +31,10 @@ public class Board {
         grid.set(position - 1, symbol);
     }
 
+    public boolean validMove(int position) {
+        return false;
+    }
+
     public boolean positionAvailable(int position) {
         if(grid.get(position - 1) == " ") {
             return true;
@@ -51,4 +55,11 @@ public class Board {
         }
     }
 
+    public boolean hasOpenSpaces() {
+        for (String s : grid) {
+            if(s == " ")
+                return true;
+        }
+        return false;
+    }
 }

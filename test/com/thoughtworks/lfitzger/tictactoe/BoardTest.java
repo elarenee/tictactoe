@@ -44,5 +44,22 @@ public class BoardTest {
         assertEquals(false, board.positionAvailable(2));
     }
 
+    @Test
+    public void shouldHaveNoOpenSpacesWhenBoardIsFull () {
+        board.move(1, player1);
+        board.move(2, player2);
+        board.move(3, player1);
+        board.move(4, player2);
+        board.move(5, player1);
+        board.move(6, player2);
+        board.move(7, player1);
+        board.move(8, player2);
+        board.move(9, player1);
+        board.move(9, player2);
+        assertEquals(false, board.hasOpenSpaces());
+        //verify(printStream).println(contains("Game is a draw"));
+
+    }
+
 }
 
