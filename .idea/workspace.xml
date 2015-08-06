@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17a25f8c-9067-4d3c-8887-de5c277ab359" name="Default" comment="Should print empty board and should print x when user makes move tests passed">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/Board.java" afterPath="$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/BoardTest.java" afterPath="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/BoardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/TicTacToeApp.java" afterPath="$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/TicTacToeApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/TicTacToeAppTest.java" afterPath="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/TicTacToeAppTest.java" />
     </list>
     <ignored path="tictactoe.iws" />
@@ -70,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -79,12 +77,12 @@
       <file leaf-file-name="TicTacToeAppTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/TicTacToeAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9002217">
-              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.6674058">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,8 +114,8 @@
         <option value="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/Board.java" />
         <option value="$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/Main.java" />
         <option value="$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/TicTacToeApp.java" />
-        <option value="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/Board.java" />
+        <option value="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/BoardTest.java" />
         <option value="$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/TicTacToeAppTest.java" />
       </list>
     </option>
@@ -654,12 +652,12 @@
       <created>1438884437458</created>
       <option name="number" value="Default" />
       <updated>1438884437458</updated>
-      <workItem from="1438884441784" duration="10965000" />
+      <workItem from="1438884441784" duration="11258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10965000" />
+    <option name="totallyTimeSpent" value="11258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="246" y="24" width="1195" height="777" extended-state="0" />
@@ -743,6 +741,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/TicTacToeApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -755,32 +763,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com.thoughtworks.lfitzger.tictactoe/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/lfitzger/tictactoe/TicTacToeAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9002217">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.6674058">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
           </folding>
         </state>
       </provider>

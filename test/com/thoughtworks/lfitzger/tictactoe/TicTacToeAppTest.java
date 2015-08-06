@@ -19,6 +19,8 @@ public class TicTacToeAppTest {
     private PrintStream printStream;
     private BufferedReader bufferedReader;
     private TicTacToeApp ticTacToeApp;
+    private final int player1 = 1;
+    private final int player2 = 2;
 
     @Before
     public void setUp() throws Exception {
@@ -40,10 +42,13 @@ public class TicTacToeAppTest {
         verify(printStream).println(contains("X"));
     }
 
-    /*@Ignore
-    public void shouldRefuseMoveWhenPlayerChoosesUnavailablePosition() {
+    @Ignore
+    public void shouldRefuseMoveWhenPlayerChoosesUnavailablePosition() throws IOException {
+        when(bufferedReader.readLine()).thenReturn("2", "2");
+        ticTacToeApp.getUsersMove(player1);
+        ticTacToeApp.getUsersMove(player2);
 
         verify(printStream).println(contains("Location already taken"));
-    }*/
+    }
 
 }

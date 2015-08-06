@@ -17,15 +17,13 @@ public class BoardTest {
 
     private PrintStream printStream;
     private Board board;
-    private int player1;
-    private int player2;
+    private final int player1 = 1;
+    private final int player2 = 2;
 
     @Before
     public void setUp() throws Exception {
         printStream = mock(PrintStream.class);
         board = new Board(printStream);
-        player1 = 1;
-        player2 = 2;
     }
 
     @Test
