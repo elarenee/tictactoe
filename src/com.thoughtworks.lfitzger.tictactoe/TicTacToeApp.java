@@ -11,27 +11,31 @@ public class TicTacToeApp {
 
     private PrintStream printStream;
     private BufferedReader bufferedReader;
+    private Board board;
 
     public TicTacToeApp(PrintStream printStream, BufferedReader bufferedReader) {
         this.printStream = printStream;
         this.bufferedReader = bufferedReader;
+        board = new Board(printStream);
     }
 
     public void startGame() {
-        printStream.println("  |   |   \n" +
-                "---------\n" +
-                "  |   |   \n" +
-                "---------\n" +
-                "  |   |   ");
+        board.draw();
+        //getUsersMove();
     }
 
-    public void getUsersMove() throws IOException {
-        printStream.println("Enter your move: ");
-        int userInput = Integer.parseInt(bufferedReader.readLine());
-        makeMove(userInput);
+    public void getUsersMove() {
+
+        printStream.println("Enter your move [1-9]: ");
+        int move = 0;
+        try {
+            move = Integer.parseInt(bufferedReader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        board.play(move);
+        printStream.println("This is the current tic-tac-toe board: ");
+        board.draw();
     }
 
-    public void makeMove (int move) {
-        printStream.println("X");
-    }
 }

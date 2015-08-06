@@ -11,5 +11,6 @@ public class Main {
     public static void main (String[] args) {
         TicTacToeApp ticTacToeApp = new TicTacToeApp(System.out, new BufferedReader(new InputStreamReader(System.in)));
         ticTacToeApp.startGame();
+        ticTacToeApp.getUsersMove();
     }
 }

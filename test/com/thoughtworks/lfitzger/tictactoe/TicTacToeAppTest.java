@@ -18,26 +18,33 @@ public class TicTacToeAppTest {
 
     private PrintStream printStream;
     private BufferedReader bufferedReader;
+    private TicTacToeApp ticTacToeApp;
 
     @Before
     public void setUp() throws Exception {
         printStream = mock(PrintStream.class);
         bufferedReader = mock(BufferedReader.class);
+        ticTacToeApp = new TicTacToeApp(printStream, bufferedReader);
+        ticTacToeApp.startGame();
     }
 
     @Test
     public void shouldDrawEmptyBoardWhenGameStarts() {
-        TicTacToeApp ticTacToeApp = new TicTacToeApp(printStream, bufferedReader);
-        ticTacToeApp.startGame();
-        verify(printStream).println(contains(" |   | "));
+        verify(printStream, times(3)).println(contains(" |   | "));
     }
 
     @Test
     public void shouldAddXWhenUserEntersMove() throws IOException {
-        TicTacToeApp ticTacToeApp = new TicTacToeApp(printStream, bufferedReader);
-        ticTacToeApp.startGame();
         when(bufferedReader.readLine()).thenReturn("1");
         ticTacToeApp.getUsersMove();
         verify(printStream).println(contains("X"));
     }
+
+    @Test
+    public void shouldAddXInNWCornerWhenUserEnters1() throws IOException {
+        when(bufferedReader.readLine()).thenReturn("1");
+        ticTacToeApp.getUsersMove();
+        verify(printStream).println(contains("X |   | "));
+    }
+
 }
