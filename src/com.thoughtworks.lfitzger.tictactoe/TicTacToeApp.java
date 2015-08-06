@@ -21,19 +21,26 @@ public class TicTacToeApp {
 
     public void startGame() {
         board.draw();
-        //getUsersMove();
     }
 
-    public void getUsersMove(int player) {
+    public void getUsersMove(int player) { // this method is way too long!!!
 
         printStream.println(String.format("Player %s, enter your move [1-9]: ", player));
-        int move = 0;
+        int position = 0;
         try {
-            move = Integer.parseInt(bufferedReader.readLine());
+            position = Integer.parseInt(bufferedReader.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        board.play(move, player);
+
+        if(board.positionAvailable(position)) {
+            board.move(position, player);
+        }
+        else {
+            printStream.println("Location already taken");
+        }
+
+
         printStream.println("This is the current tic-tac-toe board: ");
         board.draw();
     }

@@ -20,7 +20,7 @@ public class Board {
         this.printStream = printStream;
     }
 
-    public void play(int move, int player) {
+    public void move(int position, int player) {
         String symbol;
         if (player == 1) {
             symbol = "X";
@@ -28,7 +28,14 @@ public class Board {
         else
             symbol = "O";
 
-        grid.set(move - 1, symbol);
+        grid.set(position - 1, symbol);
+    }
+
+    public boolean positionAvailable(int position) {
+        if(grid.get(position - 1) == " ") {
+            return true;
+        }
+        return false;
     }
 
     public void draw() {

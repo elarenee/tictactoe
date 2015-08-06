@@ -40,4 +40,10 @@ public class TicTacToeAppTest {
         verify(printStream).println(contains("X"));
     }
 
+    /*@Ignore
+    public void shouldRefuseMoveWhenPlayerChoosesUnavailablePosition() {
+
+        verify(printStream).println(contains("Location already taken"));
+    }*/
+
 }

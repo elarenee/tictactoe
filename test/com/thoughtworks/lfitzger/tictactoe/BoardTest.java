@@ -1,34 +1,51 @@
 package com.thoughtworks.lfitzger.tictactoe;
 
+import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.io.PrintStream;
 
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.contains;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 /**
  * Created by lfitzger on 8/6/15.
  */
 public class BoardTest {
 
+    private PrintStream printStream;
+    private Board board;
+    private int player1;
+    private int player2;
+
+    @Before
+    public void setUp() throws Exception {
+        printStream = mock(PrintStream.class);
+        board = new Board(printStream);
+        player1 = 1;
+        player2 = 2;
+    }
+
     @Test
     public void shouldInsertXInNWCornerWhenUser1Enters1() {
-        PrintStream printStream = mock(PrintStream.class);
-        Board board = new Board(printStream);
-        board.play(1, 1);
-        assertEquals("X",board.grid.get(0));
+        board.move(1, player1);
+        assertEquals("X", board.grid.get(0));
     }
 
     @Test
     public void shouldInsertOInSWCornerWhenUser2Enters9() {
-        PrintStream printStream = mock(PrintStream.class);
-        Board board = new Board(printStream);
-        board.play(9, 2);
+        board.move(9, player2);
         assertEquals("O", board.grid.get(8));
     }
+
+    @Test
+    public void shouldNotBeAvailableWhenTwoUsersSelectSamePosition() {
+        board.move(2, player1);
+        assertEquals(false, board.positionAvailable(2));
+
+    }
+
 }
+
