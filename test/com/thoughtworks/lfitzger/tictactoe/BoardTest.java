@@ -1,6 +1,5 @@
 package com.thoughtworks.lfitzger.tictactoe;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import java.io.PrintStream;
@@ -17,7 +16,7 @@ public class BoardTest {
     public void shouldInsertXIntoFirstSquareWhenMoveIsOne() {
         PrintStream printStream = mock(PrintStream.class);
         Board board = new Board(printStream);
-        board.play(1);
+        board.play(1, 1);
         assertEquals("X",board.grid.get(0));
     }
 }

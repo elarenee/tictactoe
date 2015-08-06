@@ -36,15 +36,22 @@ public class TicTacToeAppTest {
     @Test
     public void shouldAddXWhenUserEntersMove() throws IOException {
         when(bufferedReader.readLine()).thenReturn("1");
-        ticTacToeApp.getUsersMove();
+        ticTacToeApp.getUsersMove(1);
         verify(printStream).println(contains("X"));
     }
 
     @Test
-    public void shouldAddXInNWCornerWhenUserEnters1() throws IOException {
+    public void shouldAddXInNWCornerWhenUser1Enters1() throws IOException {
         when(bufferedReader.readLine()).thenReturn("1");
-        ticTacToeApp.getUsersMove();
+        ticTacToeApp.getUsersMove(1);
         verify(printStream).println(contains("X |   | "));
+    }
+
+    @Test
+    public void shouldAddOInSWCornerWhenUser2Enters9() throws IOException {
+        when(bufferedReader.readLine()).thenReturn("9");
+        ticTacToeApp.getUsersMove(2);
+        verify(printStream).println(contains(" |   | O"));
     }
 
 }

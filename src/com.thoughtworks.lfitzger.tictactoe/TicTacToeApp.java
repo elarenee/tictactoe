@@ -24,16 +24,16 @@ public class TicTacToeApp {
         //getUsersMove();
     }
 
-    public void getUsersMove() {
+    public void getUsersMove(int player) {
 
-        printStream.println("Enter your move [1-9]: ");
+        printStream.println(String.format("Player %s, enter your move [1-9]: ", player));
         int move = 0;
         try {
             move = Integer.parseInt(bufferedReader.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        board.play(move);
+        board.play(move, player);
         printStream.println("This is the current tic-tac-toe board: ");
         board.draw();
     }

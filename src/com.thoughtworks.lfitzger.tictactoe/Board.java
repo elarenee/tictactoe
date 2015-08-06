@@ -20,8 +20,15 @@ public class Board {
         this.printStream = printStream;
     }
 
-    public void play(int move) {
-        grid.set(move - 1, "X");
+    public void play(int move, int player) {
+        String symbol;
+        if (player == 1) {
+            symbol = "X";
+        }
+        else
+            symbol = "O";
+
+        grid.set(move - 1, symbol);
     }
 
     public void draw() {
@@ -34,10 +41,6 @@ public class Board {
                 printStream.println(String.format("%s | %s | %s", grid.get(idx++), grid.get(idx++), grid.get(idx++)));
             }
         }
-        /*printStream.println("  |   |   \n" +
-                "---------\n" +
-                "  |   |   \n" +
-                "---------\n" +
-                "  |   |   ");*/
     }
+
 }
